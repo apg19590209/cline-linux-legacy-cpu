@@ -1,0 +1,14 @@
+# Local build output
+.cline-build/
+build/
+dist/
+node_modules/
+*.log
+*.tar.gz
+*.tar.xz
+*.zip
+
+# Do not commit upstream source checkouts or dependency caches
+cline/
+bun/
+grpc-mirror/
