@@ -63,3 +63,31 @@ Packages:
 ```
 
 The interactive Cline TUI was then launched directly from the resulting binary on the same non-AVX2 host and rendered normally.
+
+## Fresh reproducibility test
+
+A second test was performed from a fresh checkout of this repository with a clean build workspace on external storage. The build was run using only the published script:
+
+```sh
+HOME=/mnt/cline-build/home \
+WORK_ROOT=/mnt/cline-build/work \
+TMPDIR=/mnt/cline-build/tmp \
+sh ./build-cline-legacy-cpu.sh
+```
+
+The complete build finished successfully in 474.47 seconds and produced:
+
+```text
+Build complete. 1 targets built.
+Packages:
+  @cline/cli-linux-x64@3.0.62
+
+==> Smoke test
+3.0.62
+
+PASS
+Binary: /mnt/cline-build/work/cline/apps/cli/dist/cli-linux-x64/bin/cline
+Existing system Cline installation was not modified.
+```
+
+This confirms the documented workflow is reproducible from a clean checkout on the tested non-AVX2 host.
