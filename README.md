@@ -20,6 +20,7 @@ The resulting Cline CLI 3.0.62 binary:
 - passed the build-time `cline --version` smoke test
 - launched the interactive OpenTUI interface successfully on the non-AVX2 CPU
 - loaded the existing Cline configuration and project working directory successfully
+- reproduced successfully from a fresh checkout using only the published build script
 
 ## Why this exists
 
@@ -32,7 +33,7 @@ This project keeps the Cline application source unchanged and rebuilds the CLI w
 Use:
 
 ```sh
-./build-cline-legacy-cpu.sh
+sh ./build-cline-legacy-cpu.sh
 ```
 
 The script pins:
