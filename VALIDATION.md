@@ -90,6 +90,6 @@ Binary: /mnt/cline-build/work/cline/apps/cli/dist/cli-linux-x64/bin/cline
 Existing system Cline installation was not modified.
 ```
 
-The freshly rebuilt binary was then launched interactively from the Plant Care project directory. The Cline TUI opened successfully and returned a response to a test query, confirming that the clean-build binary was functional beyond the version smoke test.
+The freshly rebuilt binary was then launched interactively from a normal project working directory. The Cline TUI opened successfully and returned a response to a test query, confirming that the clean-build binary was functional beyond the version smoke test. The specific project directory used for this interactive check was incidental and is not a dependency of the compatibility build.
 
 This confirms the documented workflow is reproducible from a clean checkout on the tested non-AVX2 host.
