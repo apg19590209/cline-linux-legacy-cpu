@@ -1,5 +1,26 @@
 # Cline CLI on Linux x86_64 without AVX2
 
+## Status: superseded — project closed
+
+As of 11 October 2026, this compatibility workaround is no longer needed
+for the tested host. Official Cline CLI releases from **3.0.66** use
+Bun 1.4.2 and support x64 CPUs without AVX2.
+
+Official **3.0.70** was verified on the original Debian host:
+the version command and interactive interface work, and the existing
+DeepSeek configuration loads successfully.
+
+Use the official installation:
+
+```sh
+npm install -g cline
+```
+
+This repository is retained as a historical record of the 3.0.62
+compatibility build. It is no longer maintained. The validation below
+describes that earlier build, not the current official installation.
+
+
 Unofficial compatibility build workflow for running current Cline CLI releases on older x86_64 Linux CPUs that provide SSE4.2/AVX but do not provide AVX2.
 
 ## Status
